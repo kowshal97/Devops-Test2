@@ -1,0 +1,30 @@
+{
+  "family": "wild-rydes-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::434600758347:role/wild-rydes-infrastructure-ECSTaskExecutionRole-kiJfK8tASVZW",
+  "taskRoleArn": "arn:aws:iam::434600758347:role/wild-rydes-infrastructure-ECSTaskRole-XKX3pWTSl9BX",
+  "containerDefinitions": [
+    {
+      "name": "wild-rydes-container",
+      "image": "434600758347.dkr.ecr.us-east-1.amazonaws.com/wild-rydes:latest",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/wild-rydes",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "essential": true
+    }
+  ]
+}

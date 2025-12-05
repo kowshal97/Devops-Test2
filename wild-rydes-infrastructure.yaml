@@ -25,7 +25,7 @@ Parameters:
   ContainerPort:
     Type: Number
     Description: Port on which the container listens
-    Default: 80
+    Default: 3000
   
   DesiredCount:
     Type: Number
@@ -260,7 +260,7 @@ Resources:
       VpcId: !Ref VPC
       TargetType: ip
       HealthCheckEnabled: true
-      HealthCheckPath: /
+      HealthCheckPath: /health
       HealthCheckProtocol: HTTP
       HealthCheckIntervalSeconds: 30
       HealthCheckTimeoutSeconds: 5
