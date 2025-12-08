@@ -1,4 +1,4 @@
-##CloudFormation Template
+## CloudFormation Template
 
 ## Overview
 This CloudFormation template deploys a complete AWS infrastructure for the Wild Rydes application, converting their monolithic containerized application from ECS to a fully Infrastructure as Code (IaC) solution.
