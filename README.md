@@ -1,4 +1,4 @@
-# Wild Rydes Infrastructure - CloudFormation Template
+#CloudFormation Template
 
 ## Overview
 This CloudFormation template deploys a complete AWS infrastructure for the Wild Rydes application, converting their monolithic containerized application from ECS to a fully Infrastructure as Code (IaC) solution.
@@ -196,11 +196,3 @@ aws cloudformation delete-stack --stack-name wild-rydes-infrastructure
 
 **Note**: Empty the S3 artifacts bucket and ECR repository before deleting the stack.
 
-## Support & Additional Information
-
-This template fulfills the requirements for Test #2: Implementing DevOps Solutions by providing:
-✅ Complete ECS Fargate infrastructure
-✅ Application Load Balancer with two subnets
-✅ CI/CD pipeline (GitHub → CodeBuild → ECS)
-✅ CloudWatch alarms at each pipeline stage
-✅ Infrastructure as Code using AWS CloudFormation
